@@ -70,7 +70,7 @@ function convertToNodes(expression) {
     var operators = ["+", "*", "/", "^"];
     if (containOperators(expression)) {
         for (var k = 0; k < operators.length; k++) {
-            if (expression.includes(operators[k])) {
+            if (includesInLevel(expression, operators[k])) {
                 let arr = separateOperator(expression, operators[k]);
                 let node = { node1: convertToNodes(arr[0]), getValue: function() { return this.node1.getValue(); } };
                 for (var i = 1; i < arr.length; i++) {
@@ -119,4 +119,18 @@ function convertToNodes(expression) {
     } else {
         return { value: parseFloat(expression), getValue: function() { return this.value } };
     }
+}
+
+/*
+Checks if has operator in the current level
+ */
+function includesInLevel(expression, operator) {
+    let index = expression.indexOf(operator);
+    while (index != -1) {
+        if (!insideParenthesis(expression, index)) {
+            return true;
+        }
+        index = expression.indexOf(expression, index + 1);
+    }
+    return false;
 }
