@@ -3,7 +3,7 @@ Evaluates a math expression
 */
 function mathEval(expression) {
     expression = expression.replaceAll(" ", "");
-    expression = expression.replaceAll("-", "+-");
+    expression = replaceMinus(expression);
     let node = convertToNodes(expression);
     return node.getValue();
 }
@@ -133,4 +133,20 @@ function includesInLevel(expression, operator) {
         index = expression.indexOf(expression, index + 1);
     }
     return false;
+}
+
+/*
+Replacing minus in correct way
+*/
+function replaceMinus(expression) {
+    let newExpression = expression[0];
+    for (var i = 1; i < expression.length - 1; i++) {
+        if (expression[i] == "-") {
+            newExpression += expression[i + 1] == "(" ? "+-1*" : (containOperators(expression[i - 1]) ? "-" : "+-");
+        } else {
+            newExpression += expression[i];
+        }
+    }
+    newExpression += expression[expression.length - 1];
+    return newExpression;
 }
