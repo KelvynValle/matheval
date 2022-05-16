@@ -1,4 +1,5 @@
-# matheval - Javascript arithmetic expression evaluator
+<h1 align="center">matheval.js</h1><br/>
+<p align="center">Javascript arithmetic expression evaluator</p><br/>
 <p align="center">📚✖️➕➗🔢</p><br/>
 
 ## 🤓 Matheval? What?
