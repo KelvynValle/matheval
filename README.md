@@ -1,4 +1,6 @@
 # matheval - Javascript arithmetic expression evaluator
+<p align="center">📚✖️➕➗🔢</p><br/>
+
 ## 🤓 Matheval? What?
 Yes. Matheval. This is a small javascript project focused in allow you and me to safely evaluate arithmetic expressions in strings, returning a float as result. Yes, without the ill-spoken Javascript's eval.
 ## 🤔 But... Why would I use it?
