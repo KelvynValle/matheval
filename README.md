@@ -1,9 +1,9 @@
-# matheval - Javascript arithmetic expression evaluator.
+# matheval - Javascript arithmetic expression evaluator 📚✖️➕➗🔢
 ## Matheval? What?
 Yes. Matheval. This is a small javascript project focused in allow you and me to safely evaluate arithmetic expressions in strings, returning a float as result. Yes, without the ill-spoken Javascript's eval.
-## But... Why would I use it?
+## 🤔 But... Why would I use it?
 Mmmm... I don't know. But if you need to evaluate an arithmetic expression from a string, certainly it will be useful. With Matheval.js you can interpret math expressions in strings easily and safely, in a free and open source approach.
-## How can I implement it?
+## 📐 How can I implement it?
 **Step 1**: Download mathEval.js 
 
 Did you download? So, just move the file to your project's directory.
@@ -19,7 +19,7 @@ Did you download? So, just move the file to your project's directory.
 
 To use the mathEval() function, just call it with the string expression as parameter.
 
-## Code examples
+## 📝 Code examples
 **String:**
 ```Javascript
 mathEval("1 + 1 + 1"); //returns 3
